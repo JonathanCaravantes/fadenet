@@ -2,10 +2,9 @@
 FROM golang:1.20.2
 
 WORKDIR /app
+COPY . .
 
-COPY go.mod go.sum ./
 
-ADD template static ./
 
 RUN go mod download
 
