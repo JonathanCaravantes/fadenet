@@ -10,9 +10,6 @@ import (
 	"github.com/redis/go-redis/v9"
 )
 
-const updateState = "UPDATE public.counter SET (amount = amount + 1) WHERE (name = 'pie')"
-const queryState = "SELECT amount FROM public.counter WHERE (name = 'pie')"
-
 func main() {
 	ctx := context.Background()
 	rdb := redis.NewClient(&redis.Options{
