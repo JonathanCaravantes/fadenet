@@ -5,6 +5,8 @@ WORKDIR /app
 
 COPY go.mod go.sum ./
 
+ADD template static ./
+
 RUN go mod download
 
 COPY *.go ./
